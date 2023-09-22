@@ -1,0 +1,44 @@
+# compiled output
+/example-api/dist
+/example-api/node_modules
+/example-front/dist
+/example-front/node_modules
+/node_modules
+
+# Logs
+logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# OS
+.DS_Store
+
+# Tests
+/coverage
+/.nyc_output
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.DS_Store
+custom-provider/final-code/terraform-provider-courses/examples/.terraform.lock.hcl
+custom-provider/final-code/terraform-provider-courses/examples/terraform.tfstate.backup
+custom-provider/final-code/terraform-provider-courses/examples/terraform.tfstate
+custom-provider/final-code/terraform-provider-courses/examples/.terraform/providers/hashicorp.com/ekite/courses/0.3.18/darwin_amd64
+
