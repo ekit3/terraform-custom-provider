@@ -139,7 +139,7 @@ func resourceCourUpdate(ctx context.Context, d *schema.ResourceData, m interface
 	if err != nil {
 		panic(err)
 	}
-	log.Println(resp.StatusCode)
+	defer resp.Body.Close()
 	d.Set("last_updated", time.Now().Format(time.RFC850))
 	return resourceCourRead(ctx, d, m)
 }

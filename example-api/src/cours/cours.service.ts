@@ -11,7 +11,6 @@ export class CoursService {
 
       async create(courDto: CourDto): Promise<Cour> {
         const createdCour = await this.CourModel.create(courDto);
-        console.log(createdCour);
         return createdCour;
       }
     
@@ -24,9 +23,7 @@ export class CoursService {
       }
 
       async update(courDto: CourDto, id:string): Promise<any>{
-        let updateCour = await this.CourModel.updateOne(courDto).exec()
-        console.log(this.findOne(id))
-        return this.findOne(id);
+        return this.CourModel.findByIdAndUpdate(id,courDto);
       }
 
       async delete(id: string) {

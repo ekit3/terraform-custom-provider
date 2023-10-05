@@ -127,8 +127,6 @@ func resourceCourUpdate(ctx context.Context, d *schema.ResourceData, m interface
 	}
 
 	jsonData, err := json.Marshal(data)
-	log.Println("ICI!!!!!")
-	log.Println(jsonData)
 
 	url := "http://localhost:4000/cours/" + d.Id()
 
@@ -141,8 +139,7 @@ func resourceCourUpdate(ctx context.Context, d *schema.ResourceData, m interface
 	if err != nil {
 		panic(err)
 	}
-	log.Println(resp.StatusCode)
-	//defer resp.Body.Close()
+	defer resp.Body.Close()
 	d.Set("last_updated", time.Now().Format(time.RFC850))
 	return resourceCourRead(ctx, d, m)
 }
