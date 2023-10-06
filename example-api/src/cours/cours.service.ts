@@ -22,8 +22,8 @@ export class CoursService {
         return this.CourModel.findOne({ _id: id }).exec();
       }
 
-      async update(courDto: CourDto, id:string): Promise<any>{
-        return this.CourModel.findByIdAndUpdate(id,courDto);
+      async update(courDto: CourDto, id:string): Promise<Cour>{
+        return this.CourModel.findByIdAndUpdate(id,courDto).exec();
       }
 
       async delete(id: string) {
