@@ -41,7 +41,7 @@ Hashicorp fournit différente librairies pour faciliter le développement de pro
 
 #### Pas à pas
 
-<insert-vid-link>
+*insert-vid-link*
 
 ### Conseils & conclusion
 
